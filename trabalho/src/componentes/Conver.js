@@ -6,15 +6,15 @@ function Conver() {
     const [conver, setconver] = useState(null);
 
     const conversao = () => {
-        const resultado = quantReal /valordolar
-        
+        const resultado = quantReal / valordolar
+
         setconver(resultado)
     }
     return (
-        <div className='Media'>
-            <input type='number' value={nota1} onChange={(e) => setquantReal(e.target.value)} placeholder='Digite a quantidade de reais' /> 
-            <input type='number' value={nota2} onChange={(e) => setvalordolar(e.target.value)} placeholder='Digite o valor do Dolar' />
-            <button onClick={conver}> Calcular media</button>
+        <div className='conver'>
+            <input type='number' value={quantReal} onChange={(e) => setquantReal(e.target.value)} placeholder='Digite a quantidade de reais' />
+            <input type='number' value={valordolar} onChange={(e) => setvalordolar(e.target.value)} placeholder='Digite o valor do Dolar' />
+            <button onClick={conversao}> Calcular </button>
             {conver !== null && <p> Resultado: {conver} </p>}
         </div>
     )
